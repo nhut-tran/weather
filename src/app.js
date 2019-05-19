@@ -25,7 +25,7 @@ app.get('/about', (req, res)=>{
 })
 app.get('/help', (req, res)=>{
     res.render('help', {
-        name:'Help',
+        name:'Helps',
         info:'this is some useful help'
     })
 })
