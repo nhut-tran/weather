@@ -21,6 +21,6 @@ const geoCode = (address, getCode) => {
         
       } 
     })
-}
+};
 
 module.exports = geoCode;

@@ -5,7 +5,7 @@ const app = express();
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
-const geocode = require('./utils/geoCode');
+const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 const port = process.env.PORT || 3000;
 app.use(express.static(publicDirectoryPath));
