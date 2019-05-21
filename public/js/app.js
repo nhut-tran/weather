@@ -22,10 +22,10 @@ weatherForm.addEventListener('submit', (e)=>{
             
         }else{
             
-            document.querySelector('#messeage-1').textContent = `Current Temperature: ${data.temp}`
+            document.querySelector('#messeage-1').textContent = `Current Temperature: ${Math.round((data.temp-32)/1.8)}`
            
-            document.querySelector('#messeage-2').textContent = `Maxtemperature:  ${data.temperatureHigh}`
-            document.querySelector('#messeage-3').textContent= `Mintemperature: ${data.temperatureLow}`
+            document.querySelector('#messeage-2').textContent = `Maxtemperature:  ${Math.round((data.temperatureHigh-32)/1.8)}`
+            document.querySelector('#messeage-3').textContent= `Mintemperature: ${Math.round((data.temperatureLow-32)/1.8)}`
             document.querySelector('#messeage-4').textContent= `Humidity: ${data.humidity}`
             document.querySelector('#messeage-5').textContent=`RainPro: ${data.RainProbility}`;
             
