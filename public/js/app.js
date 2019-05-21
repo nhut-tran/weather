@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit', (e)=>{
     document.querySelector('#messeage-1').textContent='Loading....'
     document.querySelector('#messeage-2').textContent='Please wait.....'
     const location = address.value;
-    fetch(`http://localhost:3000/weather?address=${location}`)
+    fetch(`/weather?address=${location}`)
     .then((res)=>{
     res.json().then((data)=>{
         if(data.error){

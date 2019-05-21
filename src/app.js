@@ -5,8 +5,9 @@ const app = express();
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
-const geocode = require('./utils/geoCode')
-const forecast = require('./utils/forecast')
+const geocode = require('./utils/geoCode');
+const forecast = require('./utils/forecast');
+const port = process.env.PORT || 3000;
 app.use(express.static(publicDirectoryPath));
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
@@ -79,6 +80,6 @@ app.get('*', (req, res)=>{
         info: 'Page not found',
     })
 });
-app.listen(3000, ()=>{
-    console.log('server is up')
+app.listen(port, ()=>{
+    console.log('server is up on' + port)
 });
