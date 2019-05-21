@@ -11,6 +11,9 @@ const forecast = (long, lat, wea)=>{
       
       wea(undefined, {
           summary: response.body.daily.data[0].summary,
+          temperatureHigh: response.body.daily.data[0].temperatureHigh,
+          temperatureHLow: response.body.daily.data[0].temperatureLow,
+          humidity: response.body.daily.data[0].humidity,
           temp: response.body.currently.temperature,
           RainProbility: response.body.currently.precipProbability
 
